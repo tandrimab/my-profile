@@ -7,11 +7,23 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      backgroundImage: {},
+      colors: {
+        jetBlack: "#121212",
       },
+      keyframes:{
+        animatedBackground: {
+          "0%": {
+            backgroundPosition: "0 0"
+          },
+          "100%": {
+            backgroundPosition: "100% 0"
+          }
+        }
+      },
+      animation: {
+        bgAnimate: 'animatedBackground 20s linear infinite'
+      }
     },
   },
   plugins: [],
